@@ -1,0 +1,898 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Mummum, With All My Heart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         BACKGROUND EFFECTS
+    ================================= -->
+
+    <div class="background-hearts" id="backgroundHearts"></div>
+
+
+    <!-- ================================
+         OPENING SCREEN
+    ================================= -->
+
+    <main id="openingScreen" class="screen active">
+
+        <div class="opening-content">
+
+            <div class="tiny-label">
+                A little something from my heart
+            </div>
+
+            <h1>
+                Hey, <span>Mummum</span>...
+            </h1>
+
+            <p class="opening-text">
+                I know things haven't felt the same lately.
+            </p>
+
+            <p class="opening-text secondary">
+                So I made something for you instead of trying
+                to explain everything with just a few words.
+            </p>
+
+            <div class="opening-note">
+
+                <p>
+                    There is no pressure to forgive me.
+                </p>
+
+                <p>
+                    No pressure to reply.
+                </p>
+
+                <p>
+                    Just take your time...
+                </p>
+
+                <p>
+                    and let me say what I should have said properly.
+                </p>
+
+            </div>
+
+            <button
+                id="startButton"
+                class="main-button"
+                type="button"
+            >
+                Start My Little Surprise
+                <span>♡</span>
+            </button>
+
+            <div class="scroll-hint">
+                made with love & sincerity
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================================
+         APOLOGY SCREEN
+    ================================= -->
+
+    <section id="apologyScreen" class="screen hidden">
+
+        <div class="section-container">
+
+            <div class="envelope-wrapper">
+
+                <div class="envelope" id="envelope">
+
+                    <div class="envelope-flap"></div>
+
+                    <div class="envelope-body">
+
+                        <div class="envelope-heart">
+                            ♥
+                        </div>
+
+                        <p>
+                            For Mummum
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="letter hidden" id="apologyLetter">
+
+                <div class="letter-top">
+                    <span>From my heart</span>
+                    <span>♡</span>
+                </div>
+
+                <h2>
+                    Before Anything Else...
+                </h2>
+
+                <h3>
+                    I'm Sorry.
+                </h3>
+
+                <p>
+                    Mummum,
+                </p>
+
+                <p>
+                    I'm genuinely sorry.
+                </p>
+
+                <p>
+                    I know I repeated things that had already
+                    hurt you before, and I understand why that
+                    made you upset with me.
+                </p>
+
+                <p>
+                    I don't want to make excuses for it.
+                    I don't want to say
+                    <em>"I didn't mean it"</em>
+                    and expect everything to become okay.
+                </p>
+
+                <p>
+                    I should have understood better.
+                    I should have remembered better.
+                    And most importantly, I should have been
+                    more careful with something that matters to you.
+                </p>
+
+                <p>
+                    I'm sorry for hurting someone whose feelings
+                    mean so much to me.
+                </p>
+
+                <div class="letter-signature">
+                    <span>I'm truly sorry,</span>
+                    <strong>♡</strong>
+                </div>
+
+                <button
+                    id="understandButton"
+                    class="main-button"
+                    type="button"
+                >
+                    There's More I Want You To Know
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         UNDERSTANDING SCREEN
+    ================================= -->
+
+    <section id="understandingScreen" class="screen hidden">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    I Understand
+                </span>
+
+                <h2>
+                    Your Feelings Matter.
+                </h2>
+
+                <p>
+                    There are some things I want you to know.
+                </p>
+
+            </div>
+
+
+            <div class="understanding-grid">
+
+                <article class="understanding-card">
+
+                    <div class="card-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Your feelings are valid.
+                    </h3>
+
+                    <p>
+                        You don't have to hide them just to
+                        keep things peaceful.
+                    </p>
+
+                </article>
+
+
+                <article class="understanding-card">
+
+                    <div class="card-icon">
+                        🌙
+                    </div>
+
+                    <h3>
+                        You are allowed to be upset with me.
+                    </h3>
+
+                    <p>
+                        I understand that being hurt doesn't
+                        disappear just because I apologized.
+                    </p>
+
+                </article>
+
+
+                <article class="understanding-card">
+
+                    <div class="card-icon">
+                        🫶
+                    </div>
+
+                    <h3>
+                        You don't have to pretend you're okay.
+                    </h3>
+
+                    <p>
+                        I would rather know how you genuinely
+                        feel than have you hide it.
+                    </p>
+
+                </article>
+
+
+                <article class="understanding-card">
+
+                    <div class="card-icon">
+                        🌷
+                    </div>
+
+                    <h3>
+                        You don't owe me instant forgiveness.
+                    </h3>
+
+                    <p>
+                        I'll respect your time, your feelings,
+                        and whatever space you need.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <button
+                id="promiseButton"
+                class="main-button"
+                type="button"
+            >
+                See What I Want To Do Better
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         PROMISE SCREEN
+    ================================= -->
+
+    <section id="promiseScreen" class="screen hidden">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Not Just Words
+                </span>
+
+                <h2>
+                    Things I Want To Do Better
+                </h2>
+
+                <p>
+                    I don't want my apology to end with words.
+                </p>
+
+            </div>
+
+
+            <div class="promise-grid">
+
+                <article class="promise-card">
+
+                    <div class="flower">
+                        🌷
+                    </div>
+
+                    <h3>
+                        Listen Better
+                    </h3>
+
+                    <p>
+                        I want to listen to understand,
+                        not just to reply.
+                    </p>
+
+                </article>
+
+
+                <article class="promise-card">
+
+                    <div class="flower">
+                        🌸
+                    </div>
+
+                    <h3>
+                        Remember What Matters
+                    </h3>
+
+                    <p>
+                        If something hurts you,
+                        I want to learn from it.
+                    </p>
+
+                </article>
+
+
+                <article class="promise-card">
+
+                    <div class="flower">
+                        🌹
+                    </div>
+
+                    <h3>
+                        Be More Thoughtful
+                    </h3>
+
+                    <p>
+                        I want my actions to show
+                        that I genuinely care.
+                    </p>
+
+                </article>
+
+
+                <article class="promise-card">
+
+                    <div class="flower">
+                        🌺
+                    </div>
+
+                    <h3>
+                        Respect Your Boundaries
+                    </h3>
+
+                    <p>
+                        Your comfort will always matter
+                        to me.
+                    </p>
+
+                </article>
+
+
+                <article class="promise-card">
+
+                    <div class="flower">
+                        🌼
+                    </div>
+
+                    <h3>
+                        Be Consistent
+                    </h3>
+
+                    <p>
+                        I don't want to promise change only
+                        when you're upset. I want to show it
+                        over time.
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <button
+                id="safePlaceButton"
+                class="main-button"
+                type="button"
+            >
+                One More Thing...
+                <span>♡</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         SAFE PLACE SCREEN
+    ================================= -->
+
+    <section id="safePlaceScreen" class="screen hidden">
+
+        <div class="safe-place-container">
+
+            <div class="safe-glow"></div>
+
+            <span class="eyebrow">
+                You Never Have To Pretend
+            </span>
+
+            <h2>
+                I Want You To Feel Safe With Me.
+            </h2>
+
+            <div class="comfort-message">
+
+                <p>
+                    You don't have to be strong around me
+                    all the time.
+                </p>
+
+                <p>
+                    If you're tired, you can be quiet.
+                </p>
+
+                <p>
+                    If you're upset, you can say it.
+                </p>
+
+                <p>
+                    If you need space, I'll respect it.
+                </p>
+
+                <p>
+                    If you need reassurance,
+                    I'll try to give it.
+                </p>
+
+            </div>
+
+            <div class="safe-message">
+
+                <strong>
+                    I want you to feel that you can be yourself
+                    around me.
+                </strong>
+
+                <span>
+                    Without having to worry about being judged
+                    or misunderstood.
+                </span>
+
+            </div>
+
+
+            <button
+                id="appreciationButton"
+                class="main-button"
+                type="button"
+            >
+                Let Me Tell You Why You're Special
+                <span>♡</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         APPRECIATION SCREEN
+    ================================= -->
+
+    <section id="appreciationScreen" class="screen hidden">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Just Because You're You
+                </span>
+
+                <h2>
+                    Things I Love About You
+                </h2>
+
+                <p>
+                    Not because of what you do for me.
+                    Just because you're you.
+                </p>
+
+            </div>
+
+
+            <div class="appreciation-grid">
+
+                <article class="appreciation-card">
+                    <span>01</span>
+                    <p>
+                        Your little way of talking.
+                    </p>
+                </article>
+
+                <article class="appreciation-card">
+                    <span>02</span>
+                    <p>
+                        The way you care about the people you love.
+                    </p>
+                </article>
+
+                <article class="appreciation-card">
+                    <span>03</span>
+                    <p>
+                        The little things you probably don't even
+                        realize I notice.
+                    </p>
+                </article>
+
+                <article class="appreciation-card">
+                    <span>04</span>
+                    <p>
+                        The way you can make an ordinary conversation
+                        feel special.
+                    </p>
+                </article>
+
+                <article class="appreciation-card">
+                    <span>05</span>
+                    <p>
+                        Your presence.
+                    </p>
+                </article>
+
+                <article class="appreciation-card">
+                    <span>06</span>
+                    <p>
+                        Your individuality.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <div class="important-line">
+
+                <p>
+                    I don't value you because of what you do for me.
+                </p>
+
+                <strong>
+                    I value you because you're you.
+                </strong>
+
+            </div>
+
+
+            <button
+                id="memoriesButton"
+                class="main-button"
+                type="button"
+            >
+                Open Our Memories
+                <span>📸</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         MEMORIES SCREEN
+    ================================= -->
+
+    <section id="memoriesScreen" class="screen hidden">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    Little Pieces Of Us
+                </span>
+
+                <h2>
+                    Our Little Memories
+                </h2>
+
+                <p>
+                    Some moments become special simply because
+                    you were there.
+                </p>
+
+            </div>
+
+
+            <div class="memory-placeholder">
+
+                <div class="memory-icon">
+                    📸
+                </div>
+
+                <h3>
+                    Our memories will live here.
+                </h3>
+
+                <p>
+                    Your photos and personal memories can be
+                    added here later.
+                </p>
+
+            </div>
+
+
+            <button
+                id="reasonsButton"
+                class="main-button"
+                type="button"
+            >
+                Open The 100 Little Reasons
+                <span>♥</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         100 REASONS SCREEN
+    ================================= -->
+
+    <section id="reasonsScreen" class="screen hidden">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    A Hundred Little Things
+                </span>
+
+                <h2>
+                    100 Little Reasons
+                </h2>
+
+                <p>
+                    Click the hearts. Each one has something
+                    I want you to know.
+                </p>
+
+            </div>
+
+
+            <div
+                class="reasons-grid"
+                id="reasonsGrid"
+            >
+
+                <!-- JavaScript will create the hearts here -->
+
+            </div>
+
+
+            <button
+                id="secretButton"
+                class="main-button hidden"
+                type="button"
+            >
+                One Last Secret...
+                <span>🔐</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         SECRET SCREEN
+    ================================= -->
+
+    <section id="secretScreen" class="screen hidden">
+
+        <div class="secret-container">
+
+            <div class="secret-box" id="secretBox">
+
+                <div class="secret-lock">
+                    🔐
+                </div>
+
+                <p>
+                    There's one thing
+                    I haven't said yet...
+                </p>
+
+                <button
+                    id="openSecretButton"
+                    class="main-button"
+                    type="button"
+                >
+                    Open My Last Secret
+                    <span>♡</span>
+                </button>
+
+            </div>
+
+
+            <div
+                class="secret-letter hidden"
+                id="secretLetter"
+            >
+
+                <span class="eyebrow">
+                    One Last Thing
+                </span>
+
+                <h2>
+                    I Don't Expect This Website
+                    To Fix Everything.
+                </h2>
+
+                <p>
+                    I know trust is built through actions,
+                    not beautiful words.
+                </p>
+
+                <p>
+                    So I'm not asking you to believe every
+                    promise I make today.
+                </p>
+
+                <p>
+                    Just let my actions slowly show you
+                    that I mean them.
+                </p>
+
+                <button
+                    id="finalButton"
+                    class="main-button"
+                    type="button"
+                >
+                    My Final Letter
+                    <span>♡</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         FINAL LETTER SCREEN
+    ================================= -->
+
+    <section id="finalScreen" class="screen hidden">
+
+        <div class="final-container">
+
+            <div class="final-stars">
+                ✦　✧　♡　✧　✦
+            </div>
+
+            <span class="eyebrow">
+                From My Heart
+            </span>
+
+            <h1>
+                Mummum,
+            </h1>
+
+            <div class="final-letter">
+
+                <p>
+                    I can't undo the moments when I hurt you.
+                </p>
+
+                <p>
+                    But I can learn from them.
+                </p>
+
+                <p>
+                    I can be more careful.
+                    I can listen better.
+                    I can respect your feelings more.
+                    I can stop taking your presence for granted.
+                </p>
+
+                <p>
+                    I don't want you to feel loved only when
+                    everything between us is perfect.
+                </p>
+
+                <p class="highlight">
+                    I want you to feel loved, valued and respected
+                    even when we're having a difficult day.
+                </p>
+
+                <p>
+                    I want my presence in your life to feel
+                    comforting — not stressful.
+                </p>
+
+                <p>
+                    And I know saying this is easy.
+                </p>
+
+                <p>
+                    So I don't want to prove it with this website.
+                    I want to prove it with the way I treat you
+                    after you close it.
+                </p>
+
+                <p class="final-apology">
+                    I'm sorry, Mummum.
+                    Truly.
+                </p>
+
+                <p>
+                    And thank you for being someone whose feelings
+                    matter enough for me to want to become better.
+                </p>
+
+            </div>
+
+
+            <div class="final-bottom">
+
+                <div class="heart-pulse">
+                    ♥
+                </div>
+
+                <p>
+                    No pressure. No expectations.
+                </p>
+
+                <strong>
+                    Just a little piece of my heart,
+                    made for you.
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

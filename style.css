@@ -1,0 +1,1813 @@
+
+/* =========================================================
+   MUMMUM SURPRISE WEBSITE
+   Premium Romantic / Apology / Comfort Theme
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family:
+        "Segoe UI",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    color: #fff7fa;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 105, 150, 0.18),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(190, 90, 255, 0.14),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #160b17 0%,
+            #24101f 45%,
+            #100b18 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   2. GLOBAL
+   ========================================================= */
+
+button {
+    font: inherit;
+}
+
+button:focus-visible {
+    outline: 2px solid #ffd5e3;
+    outline-offset: 5px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   3. SCREEN SYSTEM
+   ========================================================= */
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 22px;
+
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.screen:not(.active) {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   4. OPENING SCREEN
+   ========================================================= */
+
+#openingScreen {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255, 120, 160, 0.16),
+            transparent 35%
+        );
+}
+
+.opening-content {
+    width: min(850px, 100%);
+    text-align: center;
+
+    position: relative;
+    z-index: 5;
+
+    animation: openingAppear 1.5s ease forwards;
+}
+
+.tiny-label {
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    margin-bottom: 28px;
+
+    border: 1px solid rgba(255, 190, 210, 0.25);
+
+    border-radius: 100px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    backdrop-filter: blur(10px);
+
+    color: #eab8c8;
+
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.opening-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3.5rem, 9vw, 7rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+
+    text-shadow:
+        0 0 35px rgba(255, 130, 170, 0.2);
+}
+
+.opening-content h1 span {
+    display: block;
+
+    margin-top: 15px;
+
+    color: #ffb6cf;
+
+    font-style: italic;
+
+    text-shadow:
+        0 0 25px rgba(255, 100, 150, 0.45);
+}
+
+.opening-text {
+    max-width: 620px;
+
+    margin: 0 auto 8px;
+
+    color: #f8dce6;
+
+    font-size: 1.15rem;
+}
+
+.opening-text.secondary {
+    color: #cbaeb9;
+
+    font-size: 0.98rem;
+}
+
+.opening-note {
+    width: min(520px, 100%);
+
+    margin: 40px auto;
+
+    padding: 25px;
+
+    border-left: 1px solid rgba(255, 170, 195, 0.45);
+    border-right: 1px solid rgba(255, 170, 195, 0.45);
+
+    color: #e8c5d0;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size: 0.95rem;
+}
+
+.opening-note p {
+    margin: 3px 0;
+}
+
+
+/* =========================================================
+   5. MAIN BUTTON
+   ========================================================= */
+
+.main-button {
+    position: relative;
+
+    border: 1px solid rgba(255, 205, 220, 0.3);
+
+    border-radius: 100px;
+
+    padding: 15px 28px;
+
+    margin-top: 30px;
+
+    cursor: pointer;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 100, 150, 0.22),
+            rgba(150, 80, 180, 0.2)
+        );
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25),
+        inset 0 1px rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.main-button span {
+    margin-left: 9px;
+}
+
+.main-button:hover {
+    transform: translateY(-4px) scale(1.02);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 100, 150, 0.35),
+            rgba(170, 80, 200, 0.32)
+        );
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(255, 100, 160, 0.15);
+}
+
+.main-button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
+/* =========================================================
+   6. BACKGROUND HEARTS
+   ========================================================= */
+
+.background-hearts {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.floating-heart {
+    position: absolute;
+
+    bottom: -50px;
+
+    color: rgba(255, 140, 175, 0.13);
+
+    font-size: 18px;
+
+    animation:
+        floatHeart linear forwards;
+
+    user-select: none;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-115vh)
+            rotate(35deg)
+            scale(1.4);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   7. SECTION CONTAINER
+   ========================================================= */
+
+.section-container {
+    width: min(1100px, 100%);
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 3;
+
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #e9aabd;
+
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 5vw, 4.3rem);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+
+    color: #fff3f7;
+}
+
+.section-heading p {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #cdb4be;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   8. ENVELOPE
+   ========================================================= */
+
+.envelope-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 35px;
+}
+
+.envelope {
+    width: 290px;
+    height: 190px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    perspective: 1000px;
+
+    filter:
+        drop-shadow(
+            0 20px 45px rgba(0, 0, 0, 0.45)
+        );
+
+    transition:
+        transform 0.5s ease;
+}
+
+.envelope:hover {
+    transform:
+        translateY(-8px)
+        rotate(-1deg);
+}
+
+.envelope-body {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #7b314e,
+            #45182d
+        );
+
+    border: 1px solid rgba(255, 210, 225, 0.18);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.envelope-body::before,
+.envelope-body::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(255, 210, 225, 0.14);
+
+    transform: rotate(45deg);
+}
+
+.envelope-body::before {
+    left: -120px;
+}
+
+.envelope-body::after {
+    right: -120px;
+}
+
+.envelope-heart {
+    position: relative;
+
+    z-index: 2;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #ffb7ce;
+
+    font-size: 1.5rem;
+
+    box-shadow:
+        0 0 25px rgba(255, 100, 160, 0.3);
+}
+
+.envelope-body p {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 14px;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    color: #ffeaf1;
+}
+
+.envelope-flap {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9b4664,
+            #60233f
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    transform-origin: top center;
+
+    transition:
+        transform 0.8s cubic-bezier(.65,.05,.36,1);
+}
+
+.envelope.open .envelope-flap {
+    transform:
+        rotateX(180deg);
+}
+
+
+/* =========================================================
+   9. LETTER
+   ========================================================= */
+
+.letter {
+    width: min(700px, 100%);
+
+    margin: 30px auto 0;
+
+    padding: 45px;
+
+    text-align: left;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255, 220, 230, 0.13);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.3);
+
+    animation:
+        letterReveal 0.9s ease forwards;
+}
+
+.letter-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+
+    color: #c995a8;
+
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.letter h2 {
+    font-family: Georgia, serif;
+
+    font-size: 2rem;
+
+    font-weight: 400;
+
+    margin-bottom: 5px;
+}
+
+.letter h3 {
+    color: #ffb0ca;
+
+    font-family: Georgia, serif;
+
+    font-size: 2.4rem;
+
+    font-weight: 400;
+
+    margin-bottom: 35px;
+}
+
+.letter p {
+    color: #ddc8d0;
+
+    margin-bottom: 19px;
+}
+
+.letter p:first-of-type {
+    color: #fff;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.15rem;
+}
+
+.letter-signature {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 35px;
+
+    color: #c99baa;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+}
+
+.letter-signature strong {
+    color: #ff9fbd;
+
+    font-size: 1.7rem;
+}
+
+@keyframes letterReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(25px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   10. UNDERSTANDING CARDS
+   ========================================================= */
+
+.understanding-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.understanding-card {
+    min-height: 240px;
+
+    padding: 32px;
+
+    border-radius: 22px;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 205, 220, 0.12);
+
+    backdrop-filter: blur(16px);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.understanding-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(255, 160, 190, 0.35);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 150, 180, 0.08);
+
+    color: #ffabc5;
+
+    font-size: 1.2rem;
+}
+
+.understanding-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 400;
+
+    margin-bottom: 12px;
+
+    color: #ffe8ef;
+}
+
+.understanding-card p {
+    color: #c9b1bb;
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   11. PROMISE CARDS
+   ========================================================= */
+
+.promise-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 15px;
+
+    align-items: stretch;
+}
+
+.promise-card {
+    min-height: 290px;
+
+    padding: 28px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 150, 180, 0.07),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 210, 225, 0.12);
+
+    transition:
+        transform 0.4s ease;
+}
+
+.promise-card:hover {
+    transform:
+        translateY(-9px);
+}
+
+.flower {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 170, 195, 0.15),
+            transparent
+        );
+
+    font-size: 2rem;
+
+    animation:
+        gentleFloat 4s ease-in-out infinite;
+}
+
+.promise-card:nth-child(2) .flower {
+    animation-delay: .5s;
+}
+
+.promise-card:nth-child(3) .flower {
+    animation-delay: 1s;
+}
+
+.promise-card:nth-child(4) .flower {
+    animation-delay: 1.5s;
+}
+
+.promise-card:nth-child(5) .flower {
+    animation-delay: 2s;
+}
+
+.promise-card h3 {
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+
+    font-size: 1.12rem;
+
+    color: #ffeaf0;
+
+    margin-bottom: 14px;
+}
+
+.promise-card p {
+    color: #c7b1ba;
+
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+}
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* =========================================================
+   12. SAFE PLACE
+   ========================================================= */
+
+#safePlaceScreen {
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(150, 85, 190, 0.14),
+            transparent 45%
+        );
+}
+
+.safe-place-container {
+    width: min(800px, 100%);
+
+    position: relative;
+
+    z-index: 3;
+
+    text-align: center;
+}
+
+.safe-glow {
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 130, 170, 0.13),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+}
+
+.safe-place-container h2 {
+    position: relative;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin-bottom: 45px;
+}
+
+.comfort-message {
+    position: relative;
+
+    padding: 35px;
+
+    border-top: 1px solid rgba(255, 200, 220, 0.15);
+    border-bottom: 1px solid rgba(255, 200, 220, 0.15);
+
+    color: #dec8d1;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.05rem;
+
+    font-style: italic;
+}
+
+.comfort-message p {
+    margin: 7px 0;
+}
+
+.safe-message {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 38px;
+
+    color: #d0b9c3;
+}
+
+.safe-message strong {
+    color: #ffdce7;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.2rem;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   13. APPRECIATION
+   ========================================================= */
+
+.appreciation-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.appreciation-card {
+    min-height: 180px;
+
+    padding: 28px;
+
+    text-align: left;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid rgba(255, 210, 225, 0.1);
+
+    transition:
+        transform .35s ease,
+        background .35s ease;
+}
+
+.appreciation-card:hover {
+    transform: translateY(-6px);
+
+    background:
+        rgba(255, 130, 170, 0.07);
+}
+
+.appreciation-card span {
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #a9798b;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 2px;
+}
+
+.appreciation-card p {
+    color: #e2cbd4;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.05rem;
+}
+
+.important-line {
+    margin: 50px auto 0;
+
+    max-width: 650px;
+}
+
+.important-line p {
+    color: #c3aab5;
+}
+
+.important-line strong {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #ffb3ca;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.3rem;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   14. MEMORY PLACEHOLDER
+   ========================================================= */
+
+.memory-placeholder {
+    width: min(650px, 100%);
+
+    margin: auto;
+
+    padding: 65px 30px;
+
+    border-radius: 28px;
+
+    border: 1px dashed rgba(255, 190, 210, 0.2);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+.memory-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: auto auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 150, 180, 0.08);
+
+    font-size: 2rem;
+}
+
+.memory-placeholder h3 {
+    font-family: Georgia, serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+.memory-placeholder p {
+    color: #bda6b0;
+}
+
+
+/* =========================================================
+   15. REASONS GRID
+   ========================================================= */
+
+.reasons-grid {
+    width: min(850px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(10, 1fr);
+
+    gap: 10px;
+}
+
+.reason-heart {
+    width: 55px;
+    height: 55px;
+
+    margin: auto;
+
+    border: 1px solid rgba(255, 180, 205, 0.15);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 130, 170, 0.045);
+
+    color: #ffabc6;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.1rem;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.reason-heart:hover {
+    transform:
+        translateY(-5px)
+        scale(1.08);
+
+    background:
+        rgba(255, 130, 170, 0.13);
+
+    box-shadow:
+        0 0 25px rgba(255, 100, 160, 0.2);
+}
+
+.reason-heart.opened {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 110, 160, 0.3),
+            rgba(180, 90, 200, 0.25)
+        );
+
+    border-color:
+        rgba(255, 190, 210, 0.35);
+}
+
+
+/* =========================================================
+   16. REASON POPUP
+   ========================================================= */
+
+.reason-popup {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(10, 5, 12, 0.78);
+
+    backdrop-filter: blur(12px);
+
+    animation:
+        popupFade .3s ease forwards;
+}
+
+.reason-popup-card {
+    width: min(520px, 100%);
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2c1425,
+            #1b101c
+        );
+
+    border:
+        1px solid rgba(255, 200, 220, 0.18);
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.55);
+
+    animation:
+        popupScale .4s ease forwards;
+}
+
+.reason-popup-card .popup-heart {
+    font-size: 2.5rem;
+
+    margin-bottom: 20px;
+
+    color: #ffabc6;
+}
+
+.reason-popup-card p {
+    font-family: Georgia, serif;
+
+    font-size: 1.25rem;
+
+    color: #f5dfe7;
+}
+
+.close-popup {
+    margin-top: 25px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #a98b97;
+
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    color: #fff;
+}
+
+@keyframes popupFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popupScale {
+
+    from {
+        transform:
+            scale(.92)
+            translateY(10px);
+
+        opacity: 0;
+    }
+
+    to {
+        transform:
+            scale(1)
+            translateY(0);
+
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   17. SECRET
+   ========================================================= */
+
+.secret-container {
+    width: min(800px, 100%);
+
+    text-align: center;
+}
+
+.secret-box {
+    padding: 65px 35px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid rgba(255, 210, 225, 0.13);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.secret-lock {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: auto auto 25px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 150, 180, 0.08);
+
+    font-size: 2.4rem;
+
+    animation:
+        lockPulse 2.5s ease-in-out infinite;
+}
+
+.secret-box p {
+    font-family: Georgia, serif;
+
+    font-size: 1.4rem;
+
+    color: #e9d2da;
+}
+
+@keyframes lockPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 rgba(255, 100, 160, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 35px rgba(255, 100, 160, 0.18);
+    }
+}
+
+.secret-letter {
+    width: min(700px, 100%);
+
+    margin: auto;
+
+    padding: 55px 40px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border:
+        1px solid rgba(255, 210, 225, 0.13);
+
+    animation:
+        letterReveal .8s ease forwards;
+}
+
+.secret-letter h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(2rem, 5vw, 3.3rem);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin-bottom: 30px;
+}
+
+.secret-letter p {
+    color: #cdb6c0;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   18. FINAL SCREEN
+   ========================================================= */
+
+#finalScreen {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            rgba(255, 110, 160, 0.13),
+            transparent 35%
+        );
+}
+
+.final-container {
+    width: min(800px, 100%);
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 4;
+}
+
+.final-stars {
+    color: #e9a4bb;
+
+    font-size: 1.2rem;
+
+    letter-spacing: 10px;
+
+    margin-bottom: 30px;
+
+    animation:
+        starGlow 3s ease-in-out infinite;
+}
+
+.final-container h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+
+    font-weight: 400;
+
+    color: #ffb8ce;
+
+    margin-bottom: 45px;
+}
+
+.final-letter {
+    text-align: left;
+
+    padding: 45px;
+
+    border-left: 1px solid rgba(255, 180, 205, 0.25);
+    border-right: 1px solid rgba(255, 180, 205, 0.25);
+}
+
+.final-letter p {
+    color: #d6c0c9;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.02rem;
+
+    margin-bottom: 25px;
+}
+
+.final-letter .highlight {
+    color: #ffe2eb;
+
+    font-size: 1.25rem;
+
+    text-align: center;
+
+    padding: 20px 0;
+
+    line-height: 1.7;
+}
+
+.final-letter .final-apology {
+    color: #ffb0c8;
+
+    font-size: 1.5rem;
+
+    text-align: center;
+
+    font-style: italic;
+}
+
+.final-bottom {
+    margin-top: 50px;
+}
+
+.heart-pulse {
+    color: #ff91b5;
+
+    font-size: 2rem;
+
+    animation:
+        heartBeat 1.6s ease-in-out infinite;
+}
+
+.final-bottom p {
+    color: #a9909a;
+
+    margin-top: 15px;
+}
+
+.final-bottom strong {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #d8bdc7;
+
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+
+    font-style: italic;
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes starGlow {
+
+    0%,
+    100% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow:
+            0 0 20px rgba(255, 150, 190, .5);
+    }
+}
+
+
+/* =========================================================
+   19. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #100912;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            #7d3c58,
+            #b25b7b
+        );
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        linear-gradient(
+            #a84f73,
+            #d06d91
+        );
+}
+
+
+/* =========================================================
+   20. SELECTION
+   ========================================================= */
+
+::selection {
+    background: rgba(255, 130, 170, 0.3);
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   21. MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .promise-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .promise-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 420px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .reasons-grid {
+        grid-template-columns:
+            repeat(8, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .screen {
+        padding:
+            55px 18px;
+    }
+
+    .opening-content h1 {
+        font-size: 4rem;
+
+        letter-spacing: -2px;
+    }
+
+    .opening-text {
+        font-size: 1rem;
+    }
+
+    .opening-note {
+        padding: 20px;
+    }
+
+    .letter {
+        padding: 30px 23px;
+    }
+
+    .understanding-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .understanding-card {
+        min-height: auto;
+    }
+
+    .promise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .promise-card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .appreciation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appreciation-card {
+        min-height: auto;
+    }
+
+    .reasons-grid {
+        grid-template-columns:
+            repeat(5, 1fr);
+
+        gap: 9px;
+    }
+
+    .reason-heart {
+        width: 48px;
+        height: 48px;
+    }
+
+    .final-letter {
+        padding: 30px 20px;
+    }
+
+    .final-letter p {
+        font-size: .95rem;
+    }
+
+    .final-letter .highlight {
+        font-size: 1.08rem;
+    }
+
+    .secret-letter {
+        padding: 40px 23px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .opening-content h1 {
+        font-size: 3.25rem;
+    }
+
+    .tiny-label {
+        font-size: .65rem;
+
+        letter-spacing: 2px;
+    }
+
+    .main-button {
+        padding: 13px 21px;
+
+        font-size: .88rem;
+    }
+
+    .section-heading h2 {
+        font-size: 2.3rem;
+    }
+
+    .reasons-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+    .reason-heart {
+        width: 50px;
+        height: 50px;
+    }
+
+    .envelope {
+        width: 270px;
+        height: 175px;
+    }
+
+    .final-container h1 {
+        font-size: 3.4rem;
+    }
+}
+
+
+/* =========================================================
+   22. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
